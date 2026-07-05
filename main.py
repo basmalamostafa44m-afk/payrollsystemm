@@ -24,7 +24,7 @@ def main_hr_app():
     while not emp_name.replace(" ","").isalpha():   # validate name to check if it only contains chars or not
         print("Invalid employee name. Please try again.")
         emp_name = input("Enter employee name: ").strip()
-
+    department = input("Enter department name: ").strip().capitalize()
     base_salary = float(input("Enter base salary (EGP): "))
     while base_salary<0:   # validate base salary
         print("Invalid base salary. Please try again.")
