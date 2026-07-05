@@ -23,8 +23,10 @@ def main_hr_app():
 
     while not emp_name.replace(" ","").isalpha():   # validate name to check if it only contains chars or not
         print("Invalid employee name. Please try again.")
-        emp_name = input("Enter employee name: ").strip()
+        emp_name = input("Enter employee name: ").strip().capitalize()
+
     department = input("Enter department name: ").strip().capitalize()
+
     base_salary = float(input("Enter base salary (EGP): "))
     while base_salary<0:   # validate base salary
         print("Invalid base salary. Please try again.")
@@ -43,7 +45,7 @@ def main_hr_app():
 
     # Outputs
     print("\n"+"="*40)
-    print(f"Payroll Statement for: {emp_name}")
+    print(f"Payroll Statement for: {emp_name} who is working in {department} department")
     print("=" * 40)
     print(f"Base salary:            {base_salary:.2f} EGP")
     print(f"Earned bonus:           {bonus:.2f} EGP")
